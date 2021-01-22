@@ -1,0 +1,8 @@
+<mat-selection-list #shoes>
+  <mat-list-option *ngFor="let item of listDate; trackBy: trackByItems">
+    {{item.name}}
+  </mat-list-option>
+</mat-selection-list>
+<p>
+  Options selected: {{shoes.selectedOptions.selected.length}}
+</p>

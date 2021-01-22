@@ -1,0 +1,9 @@
+<div class="content">
+  <h1>子向父、父向子传值</h1>
+  <app-view1 (listDateChange)="listDateChange($event)"></app-view1>
+  <app-view2 [listDate]=listDate></app-view2>
+  <button mat-button (click)="listDate=[]">ClearAll</button>
+  <hr>
+  <h1></h1>
+</div>
+<router-outlet></router-outlet>
