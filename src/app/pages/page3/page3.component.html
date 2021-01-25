@@ -1,0 +1,39 @@
+<div class="content">
+  <p [style.color]="'red'">ngFor用法1</p>
+  <div *ngFor="let item of data1; trackBy: trackByItems">
+    <p>{{item.id}}-{{item.name}}</p>
+  </div>
+  <p [style.color]="'red'">ngFor用法2</p>
+  <div *ngFor="let item of data1;trackBy: trackByItems; let index = index">
+    <p>index：{{index}}-{{item.id}}-{{item.name}}</p>
+  </div>
+  <hr>
+  <p [style.color]="'red'">ngIf用法</p>
+  <p [style.color]="'red'">操作HTML</p>
+  <div *ngIf="isShow">
+    <div>桔梗</div>
+  </div>
+  <div *ngIf="!isShow">
+    <div>奈落</div>
+  </div>
+  <button mat-flat-button color="primary" (click)="changeShow()">修改show</button>
+  <p [style.color]="'red'">修改样式不显示</p>
+  <div [style.display]="isShow ? 'block':'none'">
+    <div>桔梗</div>
+  </div>
+  <div [style.display]="!isShow ? 'block':'none'">
+    <div>奈落</div>
+  </div>
+  <hr>
+  <p [style.color]="'red'">ngSwitch指令切换</p>
+  <div [ngSwitch]="name">
+    <div *ngSwitchDefault>神乐</div>
+    <div *ngSwitchCase="'魏怡倩'">魏怡倩</div>
+    <button mat-flat-button color="primary" (click)="changeName()">切换</button>
+  </div>
+  <hr>
+  <p [style.color]="'red'">ngStyle指令切换</p>
+  <div>
+    <button mat-flat-button color="primary" (click)="changeName()">切换</button>
+  </div>
+</div>
