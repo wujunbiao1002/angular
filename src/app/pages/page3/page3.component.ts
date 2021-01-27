@@ -19,6 +19,15 @@ export class Page3Component implements OnInit {
   }];
   isShow = true;
   name: '魏怡倩';
+  classState = true;
+  classCss = {
+    classCss: this.classState,
+    classCss2: !this.classState,
+  };
+  styleState = true;
+  styleCss = {
+    'font-style': this.styleState ? 'italic' : 'normal',
+  };
 
   ngOnInit(): void {
   }
@@ -33,5 +42,20 @@ export class Page3Component implements OnInit {
 
   changeName(): void {
     this.name = '魏怡倩';
+  }
+
+  setChangeClass(): void {
+    this.classState = !this.classState;
+    this.classCss = {
+      classCss: this.classState,
+      classCss2: !this.classState,
+    };
+  }
+
+  setChangeClass2(): void {
+    this.styleState = !this.styleState;
+    this.styleCss = {
+      'font-style': this.styleState ? 'italic' : 'normal',
+    };
   }
 }

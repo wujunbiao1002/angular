@@ -32,8 +32,17 @@
     <button mat-flat-button color="primary" (click)="changeName()">切换</button>
   </div>
   <hr>
-  <p [style.color]="'red'">ngStyle指令切换</p>
+  <p [style.color]="'red'">ngClass</p>
   <div>
-    <button mat-flat-button color="primary" (click)="changeName()">切换</button>
+    <button mat-flat-button color="primary" (click)="setChangeClass()">切换</button>
+    <p [ngClass]="classState? 'classCss': ''">第一种ngClass测试</p>
+    <p [ngClass]="classCss">第二种ngClass测试</p>
+  </div>
+
+  <p [style.color]="'red'">ngStyle</p>
+  <div>
+    <button mat-flat-button color="primary" (click)="setChangeClass2()">切换</button>
+    <p [style.color]="'yellow'">第一种ngStyle测试</p>
+    <p [ngStyle]="styleCss">第二种ngStyle测试</p>
   </div>
 </div>
